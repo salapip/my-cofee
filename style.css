@@ -1,0 +1,479 @@
+:root {
+    /* Warna Navbar */
+    --navbar-bg: rgba(34, 34, 34, 0.85); /* Background Navbar */
+    --navbar-hover-bg: rgba(89, 50, 30, 0.9); /* Background saat Hover */
+
+    /* Warna Teks */
+    --text-color: #FFFFFF; /* Warna teks default */
+    --text-hover-color: #D28C32; /* Warna teks saat hover */
+    --active-menu-color: #B46432; /* Warna teks untuk menu aktif */
+
+    /* Warna Teks Tambahan */
+    --title-color: #2C2C2C; /* Judul halaman */
+    --paragraph-color: #4A4A4A; /* Paragraf */
+    --font-color-aboutus: #E0E0E0;
+
+    /* Warna Background untuk Halaman */
+    --aboutus-bg: rgba(20, 20, 20, 1); /* Cream muda untuk About Us */
+    --menu-bg: #F5F3F0; /* Putih susu dengan sedikit abu untuk menu */
+    --contact-bg: #D9C5B2; /* Cokelat lembut untuk halaman Contact */
+    --footer-bg: #292929; /* Hitam pekat untuk footer */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: var(--aboutus-bg);
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    padding: 2rem 9%;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 20px 30px 20px rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+nav .logo {
+    display: flex;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+nav .logo .firstname {
+    color: var(--text-color);
+}
+
+nav .logo .lastname {
+    color: var(--active-menu-color);
+    text-transform: capitalize;
+}
+
+nav .navbar-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+nav .navbar-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: capitalize;
+    transition: color .1s ease-in;
+    font-size: 1rem;
+}
+
+nav .navbar-nav a:hover {
+    color: var(--active-menu-color);
+}
+
+nav .navbar-extra {
+    display: flex;
+    gap: 1rem;
+    display: none;
+}
+
+nav .navbar-extra a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color .1s linear;
+}
+
+nav .navbar-extra a:hover {
+    color: var(--text-hover-color);
+}
+
+/* home */
+.home {
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0) 50%,   /* Transparan hingga 80% tinggi */
+        rgba(0, 0, 0, 0.1) 85%, /* Sedikit bayangan */
+        rgba(0, 0, 0, 0.3) 90%, /* Bayangan lebih pekat */
+        var(--aboutus-bg) 100% /* Warna baru untuk menyatu dengan About Us */
+    ), url(download.jpeg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    padding: 2rem 9% 0;
+}
+
+.home .home-box {
+    max-width: 40rem;
+    width: 100%;
+}
+
+.home .home-box h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    /* margin-bottom: 0.5rem; */
+}
+
+.home .home-box .title {
+    display: flex;
+    font-weight: bold;
+    flex-wrap: wrap;
+    font-size: 5.3rem;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+.home .home-box .title .lastname {
+    text-transform: capitalize;
+    color: var(--active-menu-color);
+}
+
+.home .home-box p {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 2.3rem;
+}
+
+.home .home-box a {
+    background-color: var(--active-menu-color);
+    padding: 0.9rem 1.3rem;
+    text-decoration: none;
+    color: var(--menu-bg);
+    text-transform: capitalize;
+    border-radius: 6px;
+    transition: background-color .1s linear;
+}
+
+.home .home-box a:hover {
+    background-color: var(--text-hover-color);
+}
+
+h1, h2, h3, p {
+    cursor: default;
+}
+/* home end */
+
+/* about */
+.about {
+    padding: 8.1rem 9% 0;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: var(--font-color-aboutus);
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+
+.about h1 span {
+    color: var(--text-hover-color);
+}
+
+.about .about-box {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: space-evenly;
+    padding: 3rem;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.about .about-box .about-img {
+    width: 60%;
+    flex: 1 1 30%;
+}
+
+.about .about-box .about-img img {
+    width: 87%;
+    border-radius: 10px;
+    filter: blur(1.5px);
+}
+
+.about .about-box .about-text {
+    flex: 1 1 55%;
+}
+
+.about .about-box .about-text h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--text-hover-color);
+    margin-bottom: 10px;
+}
+
+.about .about-box .about-text p {
+    margin: 10px 0;
+    color: var(--font-color-aboutus);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 200;
+}
+/* about end */
+
+/* menu */
+.menu {
+    padding: 8.1rem 9% 0;
+}
+
+.menu h1 {
+    font-size: 2.6rem;
+    color: var(--text-hover-color);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.menu p {
+    margin: 0.5rem 0 6rem;
+    text-align: center;
+    color: var(--font-color-aboutus);
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.menu .menu-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.menu .menu-box .menu-img {
+    width: 23%;
+    text-align: center;
+} 
+
+.menu .menu-box .menu-img img {
+    width: 100%;
+    border-radius: 47%;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu .menu-box .menu-img h2 {
+    color: var(--active-menu-color);
+    margin: 20px 0 0px;
+}
+
+.menu .menu-box .menu-img p {
+    color: var(--font-color-aboutus);
+    font-weight: 300;
+}
+
+/* menu end */
+
+/* contact */
+.contact {
+    padding: 8.1rem 9% 9rem;
+}
+
+.contact h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: var(--text-hover-color);
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+}
+
+.contact h1 span {
+    color: var(--font-color-aboutus);
+}
+
+.contact .contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1 1 60%;
+}
+
+.contact .contact-form form .form-action {
+    width: 90%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    color: var(--font-color-aboutus);
+    outline: none;
+    transition: background-color .1s linear, outline .1s linear;
+}
+
+input:focus {
+    background-color: rgba(0, 0, 0, 0.7);
+    outline: 1px solid var(--font-color-aboutus);
+}
+
+textarea {
+    resize: none;
+    margin-bottom: 0.7rem;
+    transition: background-color .1s linear, outline .1s linear;
+}
+
+textarea:focus {
+    background-color: rgba(0, 0, 0, 0.7);
+    outline: 1px solid var(--font-color-aboutus);
+}
+
+.contact .contact-form form .button a {
+    background-color: var(--active-menu-color);
+    text-decoration: none;
+    color: var(--font-color-aboutus);
+    padding: 0.9rem 1.5rem;
+    text-transform: capitalize;
+    transition: background-color .1s linear;
+    border-radius: 5px;
+}
+
+.contact .contact-form form .button a:hover {
+    background-color: var(--text-hover-color);
+}
+
+.contact .contact-form .contact-box {
+    flex: 1 1 40%;
+}
+
+.contact .contact-form .contact-box h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--text-hover-color);
+}
+
+.contact .contact-box .subtitle {
+    color: var(--font-color-aboutus);
+    font-weight: 200;
+    line-height: 1.7;
+}
+
+.contact .contact-box .contact-info {
+    line-height: 1.7;
+    font-size: 1.2rem;
+    color: var(--font-color-aboutus);
+}
+
+.contact .contact-box .contact-info p {
+    font-weight: 500;
+}
+
+.contact .contact-box .contact-info p span {
+    color: var(--text-hover-color);
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.contact .contact-box .contact-info p a {
+    color: var(--text-hover-color);
+    font-weight: 200;
+    text-decoration: none;
+}
+/* contact end */ 
+
+/* footer */
+footer {
+    padding: 2rem 9% 2rem;
+    background-color: var(--footer-bg);
+}
+
+footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .footer-content p {
+    color: var(--text-color);
+}
+
+footer .footer-links {
+    display: flex;
+    gap: 1.6rem;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: var(--active-menu-color);
+    transition: color .1s linear;
+}
+
+footer .footer-links a:hover {
+    color: var(--text-hover-color);
+}
+/* footer end */
+/* responsive */
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    nav .navbar-nav {
+        display: none;
+    }
+
+    nav .navbar-extra {
+        display: block;
+    }
+
+    .home .home-box h1 span {
+        text-wrap: wrap;
+    }
+
+    .about .about-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .about .about-box .about-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about .abot-box .about-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .menu .menu-box {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .menu .menu-box .menu-img {
+        width: 75%;
+    }
+
+    .contact .contact-form {
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .contact .contact-form form .form-action {
+        width: 100%;
+    }
+}
+/* responsive end */
